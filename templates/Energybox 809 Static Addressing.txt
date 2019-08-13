@@ -1,0 +1,84 @@
+interface ${gw.lan_if}
+ip nat inside
+ip nat enable
+!
+interface Tunnel1
+ip nat outside
+!
+<#assign ips = "${gw.lan_subnet}"?split(".")>
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 10} 22 interface GigabitEthernet2 20010
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 10} 23 interface GigabitEthernet2 21010
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 10} 80 interface GigabitEthernet2 22010
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 10} 443 interface GigabitEthernet2 23010
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 10} 21 interface GigabitEthernet2 24010
+
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 11} 22 interface GigabitEthernet2 20011
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 11} 23 interface GigabitEthernet2 21011
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 11} 80 interface GigabitEthernet2 22011
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 11} 443 interface GigabitEthernet2 23011
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 11} 21 interface GigabitEthernet2 24011
+
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 12} 22 interface GigabitEthernet2 20012
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 12} 23 interface GigabitEthernet2 21012
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 12} 80 interface GigabitEthernet2 22012
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 12} 443 interface GigabitEthernet2 23012
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 12} 21 interface GigabitEthernet2 24012
+
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 13} 22 interface GigabitEthernet2 20013
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 13} 23 interface GigabitEthernet2 21013
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 13} 80 interface GigabitEthernet2 22013
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 13} 443 interface GigabitEthernet2 23013
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 13} 21 interface GigabitEthernet2 24013
+
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 14} 22 interface GigabitEthernet2 20014
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 14} 23 interface GigabitEthernet2 21014
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 14} 80 interface GigabitEthernet2 22014
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 14} 443 interface GigabitEthernet2 23014
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 14} 21 interface GigabitEthernet2 24014
+
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 15} 22 interface GigabitEthernet2 20015
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 15} 23 interface GigabitEthernet2 21015
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 15} 80 interface GigabitEthernet2 22015
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 15} 443 interface GigabitEthernet2 23015
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 15} 21 interface GigabitEthernet2 24015
+
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 16} 22 interface GigabitEthernet2 20016
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 16} 23 interface GigabitEthernet2 21016
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 16} 80 interface GigabitEthernet2 22016
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 16} 443 interface GigabitEthernet2 23016
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 16} 21 interface GigabitEthernet2 24016
+
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 17} 22 interface GigabitEthernet2 20017
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 17} 23 interface GigabitEthernet2 21017
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 17} 80 interface GigabitEthernet2 22017
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 17} 443 interface GigabitEthernet2 23017
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 17} 21 interface GigabitEthernet2 24017
+
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 18} 22 interface GigabitEthernet2 20018
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 18} 23 interface GigabitEthernet2 21018
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 18} 80 interface GigabitEthernet2 22018
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 18} 443 interface GigabitEthernet2 23018
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 18} 21 interface GigabitEthernet2 24018
+
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 19} 22 interface GigabitEthernet2 20019
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 19} 23 interface GigabitEthernet2 21019
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 19} 80 interface GigabitEthernet2 22019
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 19} 443 interface GigabitEthernet2 23019
+ip nat inside source static tcp ${ips[0]}.${ips[1]}.${ips[2]}.${ips[3]?number + 19} 21 interface GigabitEthernet2 24019
+
+!
+ip access-list extended LAN_ACL
+ permit tcp ${gw.lan_subnet} ${gw.lan_wildcard} any eq domain
+ permit udp ${gw.lan_subnet} ${gw.lan_wildcard} any eq ntp
+ permit tcp ${gw.lan_subnet} ${gw.lan_wildcard} any eq www
+ permit tcp ${gw.lan_subnet} ${gw.lan_wildcard} any eq 1883
+ permit tcp ${gw.lan_subnet} ${gw.lan_wildcard} eq www any
+ permit udp any eq bootpc any eq bootps
+ permit udp ${gw.lan_subnet} ${gw.lan_wildcard} any eq domain
+ permit icmp ${gw.lan_subnet} ${gw.lan_wildcard} host ${gw.lan_ip}
+ permit tcp ${gw.lan_subnet} ${gw.lan_wildcard} any eq 443
+ deny ip any any
+!
+interface ${gw.lan_if}
+ ip access-group LAN_ACL in
+!
