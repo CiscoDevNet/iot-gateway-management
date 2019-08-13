@@ -1,0 +1,52 @@
+{
+  "wifi_enable": true,
+  "lan_enable": true,
+  "lan_ports": [
+    null
+  ],
+  "unified_ap_enable": false,
+  "wlc_primary_ip": "",
+  "wlc_secondary_ip": "",
+  "gps_enable": true,
+  "automatic_wifi_config": false,
+  "name": "Sample-Template",
+  "model": "IR829",
+  "wifi_ssid_prefix": "",
+  "wifi_ssid": "WiFi-SSID",
+  "wifi_pre_shared_key": "WiFi-PSK",
+  "dot1x_enable": false,
+  "advanced_wifi_config": false,
+  "broadcast_ssid_enable": true,
+  "wgb_enable": true,
+  "wgb_ssid": "WGB-SSID",
+  "wgb_pre_shared_key": "WGB-PSK",
+  "wgb_subnet": "20.20.20.0/24",
+  "wan_enable": true,
+  "wan_interface_type": "Cellular",
+  "apn": "",
+  "secondary_apn": "",
+  "customer_vpn_enable": true,
+  "customer_vpn_server_ip": "172.18.202.100",
+  "customer_vpn_pre_shared_key": "VPN-PSK",
+  "port_forwarding_enable": true,
+  "asset_names": [
+    null
+  ],
+  "port_forwards": [
+    {
+      "name": "App-1",
+      "protocol": "HTTPS",
+      "device_port": 8443,
+      "device_ip": "12.12.12.10",
+      "gateway_port": 443
+    }
+  ],
+  "private_subnet_enable": true,
+  "private_subnet_advanced": true,
+  "private_subnet_gateway_ip": "10.10.10.1",
+  "private_subnet_netmask": "255.255.255.0",
+  "private_subnet_dns_ip": "10.10.10.254",
+  "private_subnet_exclusion_range_start": "10.10.10.2",
+  "private_subnet_exclusion_range_end": "10.10.10.20",
+  "vrf_enable": false
+}

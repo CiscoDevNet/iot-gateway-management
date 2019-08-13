@@ -1,0 +1,7 @@
+{
+	"id": "",
+	"name": "Add User",
+	"description": "Add User",
+	"template": "username user1 privilege 15 password pass01",
+	"variables": [""]
+}
