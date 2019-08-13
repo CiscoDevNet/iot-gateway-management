@@ -1,0 +1,12 @@
+ip hostname ap
+ip domain-name gmm
+ crypto key generate rsa modulus 1024
+ ip SSH version 2
+ aaa new-model
+ aaa authentication login default local
+ aaa authorization exec default local
+ username netmotion privilege 15 password n3tm0ti0n
+ line vty 0 4
+ transport input ssh
+ ip scp server enable
+ workgroup-bridge service-vlan 20

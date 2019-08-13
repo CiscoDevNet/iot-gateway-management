@@ -1,0 +1,21 @@
+username netmotion privilege 15 password n3tm0ti0n
+ip host gw.kinetic.local ${gw.lan_ip}
+int ${ gw.lan_if }
+no ip nat inside
+ip nat enable
+int GigabitEthernet5
+no ip nat inside
+ip nat enable
+ip nat source static tcp ${gw.ip_prefix}.${gw.ip_suffix?number + 2} 8080 interface ${gw.lan_if} 8080
+int Vlan20
+ip address ${gw.ip_prefix}.${gw.ip_suffix?number + 8} 255.255.255.252
+ip nat enable
+no shut
+int ${ gw.wan_if }
+no ip nat outside
+ip nat enable
+int ${ gw.wan_if_sec }
+no ip nat outside
+ip nat enable
+ip nat source route-map RM_WAN_ACL interface ${ gw.wan_if } overload
+ip nat source route-map RM_WAN2_ACL interface ${ gw.wan_if_sec } overload

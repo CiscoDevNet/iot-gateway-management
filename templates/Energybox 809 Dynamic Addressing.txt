@@ -1,0 +1,17 @@
+username cisco privilege 15 password somesecurepassword
+!
+ip access-list extended LAN_ACL
+ permit tcp ${gw.lan_subnet} ${gw.lan_wildcard} any eq domain
+ permit udp ${gw.lan_subnet} ${gw.lan_wildcard} any eq ntp
+ permit tcp ${gw.lan_subnet} ${gw.lan_wildcard} any eq www
+ permit tcp ${gw.lan_subnet} ${gw.lan_wildcard} any eq 1883
+ permit tcp ${gw.lan_subnet} ${gw.lan_wildcard} eq www any
+ permit udp any eq bootpc any eq bootps
+ permit udp ${gw.lan_subnet} ${gw.lan_wildcard} any eq domain
+ permit icmp ${gw.lan_subnet} ${gw.lan_wildcard} host ${gw.lan_ip}
+ permit tcp ${gw.lan_subnet} ${gw.lan_wildcard} any eq 443
+ deny ip any any
+!
+interface ${gw.lan_if}
+ ip access-group LAN_ACL in
+!
